@@ -17,7 +17,7 @@ header {
     height: 410px;
 }
 
-header > h1 {
+header h1 {
     font-family: 'La Belle Aurore', cursive;
     margin: 0;
     padding: 5px 0 233px 0;
@@ -34,7 +34,7 @@ nav {
     height: 2.4rem;
 }
 
-.menu > ul {
+.menu ul {
     list-style-type: none; 
     padding: 0 20px;
     margin-block-start: 0;
@@ -48,10 +48,14 @@ nav {
 }
 
 nav a {
-    display: inline-block;
-    font-size: 90%;
     font-weight: 600 ;
     padding: 0 20px;
+}
+
+@media (max-width: 700px ) {
+    nav a {
+        padding: 0 6px;
+    }
 }
 
 main {
@@ -59,18 +63,29 @@ main {
     align-items: center;
 }
 
-h3 {text-align: center;
+h3 {
+    text-align: center;
+    font-size: 1.3rem;
     padding-top: 1.5rem;
     margin: 0;
 }
 
-div.intro > p {
+div.intro p {
     text-align: justify;
     justify-content: center;
     font-size: 15px;
     font-weight: 350;
     line-height: 1.2rem;
-    padding: 0 300px;
+    width: 55%;
+    margin: 0 auto;
+}
+
+/* repsonsiveness */
+
+@media (max-width: 900px ) {
+    div.intro p {
+        width: 80%;
+    }
 }
 
 section {
@@ -83,16 +98,15 @@ section {
 
 figure {
     height: 213px;
-    border: 1px;
-    border-style: dotted;
-    border-color: skyblue;
     border-radius: 5px;
-    box-shadow: 6px 4px  #1591a188;
+    box-shadow: rgba(7, 89, 100, 0.747) 5px 4px 10px 0px; 
     padding: 8px;
     
 }
-figure > img {max-height: 160px;
+
+figure img {max-height: 160px;
 }
+
 figcaption {
     text-align: justify;
     font-size: 15px;
@@ -101,9 +115,18 @@ figcaption {
     max-width: fit-content;
 }
 
-#three {padding-bottom: 25px;}
+.gg-arrow-right {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 12px;
+    height: 12px
+}
 
-footer > div  { 
+#three {padding-bottom: 35px;}
+
+footer div  { 
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -120,21 +143,22 @@ footer > div  {
     text-align: center;
 }
 
-#gallery > h2 {
+#gallery h2 {
     margin-top: 0;
     padding-top: 15px;
 }
 
-#gallery > img {
-    size: 300px;
-    border: 1px;
+#gallery img {
+    height: 240px;
     border-radius: 5px;
-    box-shadow: 4px 4px rgba(128, 128, 128, 0.425);
+    box-shadow: rgba(7, 89, 100, 0.747) 5px 4px 10px 0px; 
     margin: 5px;
 }
 
-#gallery > span {
+#gallery span {
     font-size: 0.9rem;
     padding-left: 15px;
-    
 }
+
+
+
